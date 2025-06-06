@@ -1,0 +1,10 @@
+# requirements for GUI and PDF/Word/Excel extraction
+python-docx
+PyPDF2
+openpyxl
+pandas
+tk
+streamlit
+colorama
+tabulate
+

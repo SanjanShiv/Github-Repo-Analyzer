@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  github-analyzer:
+    build: .
+    container_name: github-analyzer
+    working_dir: /app
+    volumes:
+      - .:/app
+    environment:
+      - DISPLAY=${DISPLAY}
+    command: streamlit run github_analyzer_web.py --server.port=8501 --server.address=0.0.0.0
+    ports:
+      - "8501:8501"
+    stdin_open: true
+    tty: true
